@@ -126,3 +126,42 @@ body.dark-mode footer {
   color: #bbb;
 }
 
+/* Floating Resume Button */
+.resume-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.resume-floating a {
+  background: #007acc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.resume-floating a:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+body.dark-mode .resume-floating a {
+  background: #444;
+  color: #80d4ff;
+}
+
+body.dark-mode .resume-floating a:hover {
+  background: #666;
+}
+
+
