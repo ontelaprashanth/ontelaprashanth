@@ -1,37 +1,128 @@
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #f5f7fa;
   color: #333;
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
-  background: #007acc;
+  background: linear-gradient(120deg, #007acc, #00bcd4);
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
 }
 
-header a {
-  color: white;
+header .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 10px 0 5px;
+  font-size: 2.5rem;
+}
+
+.contact a {
+  color: #fff;
   margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+#darkToggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 section {
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
   background: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
+  color: #007acc;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
   color: #007acc;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
   background: #007acc;
   color: white;
+  padding: 15px;
+  border-top: 5px solid #00bcd4;
 }
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background: linear-gradient(120deg, #222, #444);
+}
+
+body.dark-mode section {
+  background: #1e1e1e;
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+}
+
+body.dark-mode a {
+  color: #80d4ff;
+}
+
+body.dark-mode footer {
+  background: #222;
+  color: #bbb;
+}
+
